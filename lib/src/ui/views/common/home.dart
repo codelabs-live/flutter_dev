@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter_dev/src/config/size_config.dart';
 import 'package:flutter_dev/src/ui/views/web/web_home.dart';
 
 class Home extends StatefulWidget {
@@ -25,8 +26,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return isWeb
-        ? const Scaffold(body: WebHome())
+    return SizeConfigs.isLargeScreen(context)?
+    const Scaffold(body: WebHome())
         : Scaffold(
             appBar: AppBar(
               title: const Text("Home"),

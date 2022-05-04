@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dev/src/config/routes.dart';
+import 'package:flutter_dev/src/ui/utils/maintenance.dart';
 import 'package:flutter_dev/src/ui/views/common/home.dart';
 
 class App extends StatelessWidget {
@@ -10,8 +11,8 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      onGenerateRoute: Routes.controller,
-      // home: Home(),
+      // onGenerateRoute: Routes.controller,
+      home: Maintenance(),
     );
   }
 }
